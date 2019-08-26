@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@light: #ffffff;
+@dark: #000000;
+@grey: #808080;
+@greyTransparent: rgba(0, 0, 0, 0.2);
+@greyTransparent09: rgba(0, 0, 0, 0.9);
+@lightTransparent: rgba(255,255,255, 0.2);
+@lightTransparent09: rgba(255,255,255, 0.9);
+@lightGrey: #e6e6e6;
+@lightBack: #0d5003;
+
+html {
+  background: @lightGrey;
+
+  body {
+    background: @lightGrey;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+
+    .base-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-light {
+      color: @light;
+      background: @grey;
+      background: @lightTransparent;
+    }
+
+    .btn-dark {
+      color: @light;
+      background: @dark;
+      background: @greyTransparent09;
+    }
+
+    .card-light {
+      color: @dark;
+      background: @greyTransparent;
+    }
+
+    .card-dark {
+      color: @light;
+      background: @greyTransparent09;
+    }
+  }
+}

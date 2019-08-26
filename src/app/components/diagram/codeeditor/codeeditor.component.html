@@ -1,0 +1,12 @@
+<div #codeEditor class="card-dark">
+  <td-code-editor style="height: 100%;width: 100%;"
+                  editorStyle="border:0;"
+                  flex
+                  theme="vs-dark"
+                  language="javascript"
+                  automaticLayout
+                  [editorOptions]="{readOnly:false, fontSize:14, lineHeight: 15, fontWeight:100}"
+                  [(ngModel)]="editorService.text"
+                  (change)="editorChange()">
+  </td-code-editor>
+</div>

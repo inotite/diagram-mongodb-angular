@@ -1,0 +1,124 @@
+[
+  {
+    "id": "507f191e810c19729de860ea",
+    "name": "test",
+    "collections": [
+      {
+        "name": "users",
+        "fields": [
+          {
+            "name": "_id",
+            "type": "ObjectId",
+            "array": false,
+            "options": [ "index", "unique" ]
+          },
+          {
+            "name": "name",
+            "type": "String",
+            "array": false,
+            "options": [ "require" ]
+          },
+          {
+            "name": "email",
+            "type": "String",
+            "array": false,
+            "options": [ "index", "require", "unique" ]
+          },
+          {
+            "name": "orders",
+            "type": "Object",
+            "array": true,
+            "data": [
+              {
+                "name": "order",
+                "type": "String",
+                "array": false,
+                "options": [ "require" ]
+              },
+              {
+                "name": "products",
+                "type": "Object",
+                "array": true,
+                "data": [
+                  {
+                    "name": "productId",
+                    "type": "ObjectId",
+                    "array": false,
+                    "options": [ "require" ]
+                  },
+                  {
+                    "name": "count",
+                    "type": "Number",
+                    "array": false,
+                    "options": [ "require" ]
+                  }
+                ]
+              },
+              {
+                "name": "created",
+                "type": "Date",
+                "array": false,
+                "options": [ "index", "require" ]
+              },
+              {
+                "name": "updated",
+                "type": "Date",
+                "array": true
+              }
+            ]
+          },
+          {
+            "name": "address",
+            "type": "String",
+            "array": true,
+            "options": [ "require" ]
+          }
+        ]
+      },
+      {
+        "name": "products",
+        "fields": [
+          {
+            "name": "_id",
+            "type": "ObjectId",
+            "array": false,
+            "options": [ "index", "unique" ]
+          },
+          {
+            "name": "name",
+            "type": "String",
+            "array": false,
+            "options": [ "require" ]
+          },
+          {
+            "name": "created",
+            "type": "Date",
+            "array": false,
+            "options": [ "require" ]
+          },
+          {
+            "name": "price",
+            "type": "Number",
+            "array": false,
+            "options": [ "require" ]
+          },
+          {
+            "name": "imageUrl",
+            "type": "String",
+            "array": false,
+            "options": [ "require" ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "collectionOne": "products",
+        "fieldOne": "id",
+        "collectionTwo": "users",
+        "fieldTwo": "orders.products",
+        "type": "One to Many"
+      }
+    ]
+  }
+]

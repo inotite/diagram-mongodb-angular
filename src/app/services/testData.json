@@ -1,0 +1,21 @@
+[
+  {
+    "id": "507f191e810c19729de860ea",
+    "name": "testProject",
+    "collections": [
+      {
+        "name": "users",
+        "fields": [
+          {
+            "name": "id",
+            "type": "ObjectId"
+          },
+          {
+            "name": "name",
+            "type": "String"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+.diagram-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+
+  dashboard {
+    width: 100%;
+  }
+
+  .diagram-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    //flex-flow: row wrap;
+  }
+
+  code-wrapper {
+    position: relative;
+    height: 100%;
+    codeeditor {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  app-plate {
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+  }
+}

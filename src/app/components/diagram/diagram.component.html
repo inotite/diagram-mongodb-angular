@@ -1,0 +1,14 @@
+<div class="diagram-container">
+  <app-dashboard></app-dashboard>
+  <div  class="diagram-wrapper">
+    <div class="code-wrapper" #codeEditor appWidthShift
+         [minWidth]="minWidth"
+         [maxWidth]="maxWidth">
+      <app-codeeditor></app-codeeditor>
+      <button mat-button class="hide-to-left" onclick="hideToLeft()" title="Hide">
+        <mat-icon>arrow_left</mat-icon>
+      </button>
+    </div>
+    <app-plate></app-plate>
+  </div>
+</div>

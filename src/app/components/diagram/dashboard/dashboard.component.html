@@ -1,0 +1,28 @@
+<div class="card-dark">
+  <button mat-button [routerLink]="['/']"
+          class="btn-light">
+    Home
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-button
+          (click)="loadSample()"
+          class="btn-light">
+    Load sample
+  </button>
+  <button mat-button class="btn-light">
+    <mat-icon>save</mat-icon>
+    Save
+  </button>
+  <button mat-button class="btn-light">
+    <mat-icon>share</mat-icon>
+    Share
+  </button>
+  <button mat-button class="btn-light">
+    <mat-icon>cloud_upload</mat-icon>
+    Export
+  </button>
+  <button mat-button class="btn-light">
+    <mat-icon>cloud_download</mat-icon>
+    Import
+  </button>
+</div>
